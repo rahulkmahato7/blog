@@ -3,54 +3,1286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahul K Mahato — Notes & Writing</title>
+
+<title>Rahul K Mahato — Personal Journal</title>
+<meta name="description" content="A personal journal by Rahul K Mahato — life, photography, travel, sketches, nature and everyday experiences.">
+
 <link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Technical notes and writing by Rahul K Mahato — Microelectronics, VLSI, digital design and emerging computing architectures.">
-<meta name="theme-color" content="#0b0b0d">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#0b0b0d;--surface:#111114;--surface2:#151519;--text:#f3f0ea;--muted:#9b9aa0;--line:rgba(255,255,255,.09);--accent:#c9955b;--accent2:#e1b77f;--max:1160px;--radius:22px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent 82%);z-index:-1}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}.container{width:min(calc(100% - 44px),var(--max));margin:auto}.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-nav{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.8);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Manrope;font-weight:800;letter-spacing:.08em}.nav-links{display:flex;align-items:center;gap:27px;color:#bbb9bd;font-size:.88rem}.nav-links a{transition:.2s}.nav-links a:hover{color:var(--text)}.back{color:var(--accent2)}.menu{display:none;background:none;border:0;color:var(--text);font-size:1.2rem}
-.hero{padding:105px 0 80px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:500px;height:500px;right:-180px;top:-80px;border-radius:50%;background:radial-gradient(circle,rgba(201,149,91,.12),transparent 68%);filter:blur(10px);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:end}.hero h1{font:800 clamp(3.5rem,8vw,7rem)/.95 Manrope;letter-spacing:-.065em;margin:18px 0 24px;max-width:850px}.hero h1 span{color:var(--accent)}.hero p{max-width:690px;color:var(--muted);font-size:1.08rem;margin:0}.hero-mark{width:170px;height:170px;border:1px solid rgba(201,149,91,.28);border-radius:50%;display:grid;place-items:center;position:relative;color:var(--accent)}.hero-mark:before,.hero-mark:after{content:"";position:absolute;border:1px solid rgba(201,149,91,.1);border-radius:50%}.hero-mark:before{inset:18px}.hero-mark:after{inset:40px}.hero-mark span{font:700 2rem Manrope}
-.toolbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}.toolbar-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:transparent;color:#8e8c92;border-radius:999px;padding:8px 13px;font-size:.78rem}.filter.active,.filter:hover{color:var(--text);border-color:rgba(201,149,91,.5);background:rgba(201,149,91,.06)}.search{width:250px;position:relative}.search input{width:100%;background:#0f0f11;border:1px solid var(--line);border-radius:999px;color:var(--text);padding:9px 14px;outline:none}.search input:focus{border-color:rgba(201,149,91,.55)}
-section{padding:90px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}.section-head h2{font:700 clamp(2rem,4vw,3.3rem)/1.05 Manrope;letter-spacing:-.045em;margin:10px 0 0}.count{color:#5f5d63;font:.75rem ui-monospace,monospace}
-.feature{display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:linear-gradient(145deg,#121215,#0f0f11)}.feature-copy{padding:45px}.feature-copy h3{font:700 clamp(2rem,4vw,3.3rem)/1.05 Manrope;letter-spacing:-.05em;margin:13px 0 17px}.feature-copy p{color:var(--muted);max-width:630px}.meta{display:flex;gap:14px;align-items:center;color:#6f6d73;font-size:.76rem;margin-bottom:15px}.dot{width:3px;height:3px;border-radius:50%;background:var(--accent)}.read{display:inline-flex;align-items:center;gap:8px;color:var(--accent2);font-size:.85rem;margin-top:18px}.feature-art{min-height:330px;border-left:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(201,149,91,.08),transparent 52%)}.feature-art .word{font:800 8rem/.8 Manrope;letter-spacing:-.1em;color:rgba(201,149,91,.08);position:absolute}.wave{width:75%;height:150px;position:relative}.wave:before,.wave:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(201,149,91,.13)}.wave:after{background:linear-gradient(90deg,transparent 0 8%,var(--accent) 8% 8.5%,transparent 8.5% 19%,var(--accent) 19% 19.5%,transparent 19.5% 34%,var(--accent) 34% 34.5%,transparent 34.5% 51%,var(--accent) 51% 51.5%,transparent 51.5% 70%,var(--accent) 70% 70.5%,transparent 70.5%);opacity:.6;transform:skewY(-7deg)}
-.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.post{border-top:1px solid var(--line);padding:28px 0;transition:.25s}.post:hover{transform:translateY(-3px)}.post h3{font:600 1.35rem/1.25 Manrope;margin:8px 0 10px}.post p{color:var(--muted);margin:0;max-width:600px}.post .read{margin-top:15px}.post.hidden{display:none}.empty{display:none;color:var(--muted);padding:25px 0}
-.topics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.topic{padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(17,17,20,.55)}.topic b{font:600 1rem Manrope}.topic p{color:#77757b;font-size:.82rem;margin:8px 0 0}
-.cta{border:1px solid var(--line);border-radius:24px;padding:40px;background:rgba(17,17,20,.58);display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font:700 clamp(1.8rem,3vw,2.7rem)/1.1 Manrope;margin:8px 0}.cta p{color:var(--muted);margin:0}.btn{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);padding:11px 17px;border-radius:999px;transition:.2s;white-space:nowrap}.btn:hover{border-color:rgba(201,149,91,.55);color:var(--accent2);transform:translateY(-2px)}
-footer{border-top:1px solid var(--line);padding:34px 0;color:#66656a;font-size:.78rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:18px}.footer-links a:hover{color:var(--text)}
-@media(max-width:850px){.nav-links{display:none}.menu{display:block}.nav-links.open{position:absolute;top:76px;left:0;right:0;background:#0b0b0d;border-bottom:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;padding:20px 22px}.hero-grid,.feature{grid-template-columns:1fr}.hero-mark{display:none}.feature-art{border-left:0;border-top:1px solid var(--line);min-height:260px}.topics{grid-template-columns:1fr 1fr}.toolbar-inner{align-items:flex-start;flex-direction:column}.search{width:100%}}
-@media(max-width:600px){.container{width:min(calc(100% - 30px),var(--max))}.hero{padding:75px 0 60px}.hero h1{font-size:3.4rem}.feature-copy{padding:30px}.posts{grid-template-columns:1fr}.topics{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.footer-inner{flex-direction:column}}
+:root{
+    --green:#173a2d;
+    --green-dark:#0c211a;
+    --green-light:#6f9b71;
+    --ocean:#4c9299;
+    --sky:#83b9bb;
+    --sand:#e5d6b8;
+    --cream:#f5f1e8;
+    --white:#fff;
+    --text:#17221c;
+    --muted:#718078;
+    --line:rgba(23,58,45,.14);
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"DM Sans",sans-serif;
+    --display:"Manrope",sans-serif;
+    --max:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    color:var(--text);
+    background:#f4f1e9;
+    font-family:var(--sans);
+    line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{
+    width:min(calc(100% - 48px),var(--max));
+    margin:auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    height:min(790px,100vh);
+    min-height:650px;
+    position:relative;
+    color:white;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(7,19,15,.58),
+            rgba(7,19,15,.04) 40%,
+            rgba(7,19,15,.42)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+}
+
+/* dark cinematic edge */
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,rgba(0,0,0,.20),transparent 35%,rgba(0,0,0,.12)),
+        linear-gradient(0deg,rgba(0,0,0,.25),transparent 30%);
+    pointer-events:none;
+}
+
+.nav{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    border-bottom:1px solid rgba(255,255,255,.20);
+}
+
+.nav-inner{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:var(--display);
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+
+.logo span{
+    font-size:.65rem;
+    opacity:.7;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    height:72px;
+}
+
+.nav-links a{
+    height:72px;
+    display:flex;
+    align-items:center;
+    padding:0 17px;
+    border-left:1px solid rgba(255,255,255,.13);
+    font-size:.66rem;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.92);
+    transition:.25s;
+}
+
+.nav-links a:last-child{
+    border-right:1px solid rgba(255,255,255,.13);
+}
+
+.nav-links a:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.nav-links .write{
+    background:rgba(23,58,45,.72);
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:transparent;
+    color:white;
+    font-size:1.3rem;
+}
+
+/* hero text */
+
+.hero-content{
+    position:absolute;
+    z-index:3;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-38%);
+    width:min(900px,calc(100% - 40px));
+    text-align:center;
+}
+
+.hero-kicker{
+    font-size:.68rem;
+    letter-spacing:.30em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    color:rgba(255,255,255,.82);
+}
+
+.hero h1{
+    margin:0;
+    font-family:var(--display);
+    font-size:clamp(3rem,7vw,6.3rem);
+    line-height:.94;
+    letter-spacing:-.055em;
+    font-weight:700;
+    text-transform:uppercase;
+    text-shadow:0 3px 20px rgba(0,0,0,.25);
+}
+
+.hero h1 span{
+    color:#dce8ce;
+}
+
+.hero-subtitle{
+    margin:22px auto 30px;
+    max-width:610px;
+    color:rgba(255,255,255,.88);
+    font-family:var(--serif);
+    font-size:1.12rem;
+    font-style:italic;
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:13px 23px;
+    background:rgba(8,26,20,.88);
+    color:white;
+    border:1px solid rgba(255,255,255,.18);
+    font-size:.67rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    transition:.25s;
+}
+
+.hero-button:hover{
+    background:var(--green);
+    transform:translateY(-2px);
+}
+
+/* hero arrows */
+
+.hero-arrow{
+    position:absolute;
+    top:50%;
+    z-index:4;
+    width:42px;
+    height:42px;
+    transform:translateY(-50%);
+    border:1px solid rgba(255,255,255,.45);
+    background:rgba(0,0,0,.10);
+    color:white;
+    font-size:1.1rem;
+}
+
+.hero-arrow.left{left:20px}
+.hero-arrow.right{right:20px}
+
+/* =========================================================
+   INTRO PANELS
+========================================================= */
+
+.panels{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:3px;
+    background:#f4f1e9;
+}
+
+.panel{
+    min-height:235px;
+    padding:31px 28px;
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.panel:nth-child(1){
+    background:linear-gradient(145deg,#65a9ac,#43888b);
+}
+.panel:nth-child(2){
+    background:linear-gradient(145deg,#9ab86c,#67934f);
+}
+.panel:nth-child(3){
+    background:linear-gradient(145deg,#4d8b6a,#286248);
+}
+
+.panel:after{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:50%;
+    right:-55px;
+    bottom:-95px;
+}
+
+.panel-icon{
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.panel h3{
+    margin:0 0 9px;
+    font-family:var(--display);
+    font-size:1.05rem;
+    font-weight:700;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+}
+
+.panel p{
+    margin:0;
+    max-width:310px;
+    color:rgba(255,255,255,.82);
+    font-size:.78rem;
+}
+
+.panel-link{
+    display:inline-flex;
+    margin-top:22px;
+    padding:9px 14px;
+    border:1px solid rgba(255,255,255,.48);
+    font-size:.62rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome{
+    background:var(--cream);
+    padding:100px 0 115px;
+}
+
+.welcome-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:90px;
+}
+
+.welcome-copy{
+    padding-left:30px;
+}
+
+.eyebrow{
+    color:#67806d;
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+}
+
+.welcome h2{
+    margin:13px 0 22px;
+    font-family:var(--serif);
+    font-size:clamp(2.6rem,5vw,4.4rem);
+    line-height:1;
+    font-weight:500;
+    letter-spacing:-.045em;
+}
+
+.welcome h2 em{
+    color:#5d8968;
+}
+
+.welcome p{
+    max-width:560px;
+    color:#68756e;
+    font-size:.92rem;
+}
+
+.welcome .quote{
+    margin:0 0 20px;
+    color:#40594a;
+    font-family:var(--serif);
+    font-size:1.25rem;
+    font-style:italic;
+}
+
+.circle-photo{
+    width:min(430px,100%);
+    aspect-ratio:1;
+    margin:auto;
+    position:relative;
+    border-radius:50%;
+    overflow:hidden;
+    background:
+        linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.12)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+    border:12px solid #e8e1d1;
+    box-shadow:0 20px 55px rgba(25,51,38,.15);
+}
+
+.circle-photo:after{
+    content:"";
+    position:absolute;
+    inset:22px;
+    border:1px solid rgba(255,255,255,.55);
+    border-radius:50%;
+}
+
+/* =========================================================
+   FEATURED JOURNAL
+========================================================= */
+
+.journal{
+    background:#fff;
+    padding:105px 0;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:38px;
+    gap:30px;
+}
+
+.section-head h2{
+    margin:10px 0 0;
+    font-family:var(--serif);
+    font-size:clamp(2.5rem,5vw,4.2rem);
+    line-height:1;
+    font-weight:500;
+    letter-spacing:-.04em;
+}
+
+.section-head h2 em{
+    color:#5d8968;
+}
+
+.section-note{
+    color:#849088;
+    font-size:.73rem;
+    max-width:250px;
+    text-align:right;
+}
+
+.entries{
+    border-top:1px solid var(--line);
+}
+
+.entry{
+    display:grid;
+    grid-template-columns:105px 1fr 130px;
+    gap:25px;
+    padding:27px 0;
+    border-bottom:1px solid var(--line);
+    transition:.25s;
+}
+
+.entry:hover{
+    padding-left:8px;
+}
+
+.entry-date{
+    color:#829087;
+    font-size:.63rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+.entry h3{
+    margin:0 0 7px;
+    font-family:var(--serif);
+    font-size:1.65rem;
+    font-weight:500;
+    line-height:1.15;
+}
+
+.entry p{
+    margin:0;
+    color:#78827c;
+    font-size:.82rem;
+}
+
+.entry-type{
+    color:#598366;
+    text-align:right;
+    font-size:.61rem;
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   PHOTO / CREATIVE SECTION
+========================================================= */
+
+.gallery{
+    background:#173a2d;
+    color:white;
+    padding:100px 0;
+}
+
+.gallery .eyebrow{
+    color:#b9d4b2;
+}
+
+.gallery .section-head h2{
+    color:white;
+}
+
+.gallery .section-head h2 em{
+    color:#c5dfb8;
+}
+
+.gallery .section-note{
+    color:#a5b8ad;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.35fr .8fr .8fr;
+    grid-template-rows:250px 250px;
+    gap:8px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    background:#234b3b;
+}
+
+.gallery-item:first-child{
+    grid-row:1/3;
+}
+
+.gallery-item .photo{
+    position:absolute;
+    inset:0;
+    background-position:center;
+    background-size:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover .photo{
+    transform:scale(1.05);
+}
+
+.photo-1{
+    background-image:
+        linear-gradient(180deg,transparent 45%,rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85");
+}
+
+.photo-2{
+    background-image:
+        linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-3{
+    background-image:
+        linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-4{
+    background-image:
+        linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=85");
+}
+
+.photo-5{
+    background-image:
+        linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85");
+}
+
+.gallery-caption{
+    position:absolute;
+    z-index:2;
+    left:20px;
+    right:20px;
+    bottom:18px;
+}
+
+.gallery-caption small{
+    font-size:.58rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:#d2dfd3;
+}
+
+.gallery-caption h3{
+    margin:5px 0 0;
+    font-family:var(--serif);
+    font-size:1.3rem;
+    font-weight:500;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.cta{
+    position:relative;
+    overflow:hidden;
+    padding:100px 20px;
+    text-align:center;
+    background:
+        linear-gradient(rgba(13,42,32,.68),rgba(13,42,32,.88)),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    color:white;
+}
+
+.cta:before,
+.cta:after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:50%;
+}
+
+.cta:before{
+    left:8%;
+    top:18%;
+}
+
+.cta:after{
+    right:8%;
+    bottom:18%;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+}
+
+.cta h2{
+    margin:12px 0 18px;
+    font-family:var(--serif);
+    font-size:clamp(2.7rem,6vw,5rem);
+    font-weight:500;
+    line-height:1;
+}
+
+.cta p{
+    max-width:550px;
+    margin:auto;
+    color:rgba(255,255,255,.76);
+}
+
+.cta-button{
+    display:inline-flex;
+    margin-top:25px;
+    padding:13px 22px;
+    background:white;
+    color:var(--green);
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#0b211a;
+    color:#9caf9f;
+    padding:32px 0;
+    font-size:.68rem;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links.open{
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        background:rgba(8,28,21,.97);
+    }
+
+    .nav-links.open a,
+    .nav-links.open a:last-child{
+        height:50px;
+        border:0;
+        border-bottom:1px solid rgba(255,255,255,.10);
+        padding:0 24px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:clamp(2.8rem,11vw,5rem);
+    }
+
+    .panels{
+        grid-template-columns:1fr;
+    }
+
+    .panel{
+        min-height:190px;
+    }
+
+    .welcome-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .welcome-copy{
+        padding-left:0;
+    }
+
+    .circle-photo{
+        width:min(360px,90vw);
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:250px 250px 250px;
+    }
+
+    .gallery-item:first-child{
+        grid-row:1/3;
+    }
+
+    .gallery-item:last-child{
+        grid-column:1/3;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:min(calc(100% - 30px),var(--max));
+    }
+
+    .hero{
+        min-height:610px;
+    }
+
+    .hero-content{
+        width:calc(100% - 30px);
+    }
+
+    .hero-subtitle{
+        font-size:1rem;
+    }
+
+    .hero-arrow{
+        width:35px;
+        height:35px;
+    }
+
+    .hero-arrow.left{left:10px}
+    .hero-arrow.right{right:10px}
+
+    .welcome,
+    .journal,
+    .gallery{
+        padding:75px 0;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-note{
+        margin-top:15px;
+        text-align:left;
+    }
+
+    .entry{
+        grid-template-columns:1fr;
+        gap:8px;
+    }
+
+    .entry-type{
+        text-align:left;
+    }
+
+    .entry h3{
+        font-size:1.45rem;
+    }
+
+    .gallery-grid{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:300px 230px 230px 230px 230px;
+    }
+
+    .gallery-item:first-child,
+    .gallery-item:last-child{
+        grid-column:auto;
+        grid-row:auto;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="container nav-inner"><a class="brand" href="index.html">RAHUL K MAHATO</a><div class="nav-links" id="navLinks"><a href="index.html">Portfolio</a><a href="#featured">Featured</a><a href="#writing">Writing</a><a href="#topics">Topics</a><a href="#about-blog">About</a></div><button class="menu" id="menu" aria-label="Open navigation">☰</button></div></nav>
 
-<header class="hero"><div class="container hero-grid"><div><div class="eyebrow">Notes · Ideas · Engineering</div><h1>Thoughts on <span>technology.</span></h1><p>A personal space for notes and writing around electronics, microelectronics, digital design, VLSI and emerging computing architectures.</p></div><div class="hero-mark" aria-hidden="true"><span>RKM</span></div></div></header>
+<!-- =====================================================
+     HERO / NAV
+===================================================== -->
 
-<div class="toolbar"><div class="container toolbar-inner"><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="technology">Technology</button><button class="filter" data-filter="electronics">Electronics</button></div><div class="search"><input id="search" type="search" placeholder="Search notes…" aria-label="Search notes"></div></div></div>
+<header class="hero">
 
-<section id="featured"><div class="container"><div class="section-head"><div><div class="eyebrow">Featured</div><h2>Start here.</h2></div><div class="count mono">01 / FEATURED NOTE</div></div><article class="feature"><div class="feature-copy"><div class="meta"><span>TECHNOLOGY</span><i class="dot"></i><span>JUN 25, 2023</span></div><h3>Exploring Static Site Generators with React</h3><p>This article is part of Rahul K Mahato’s technical notes. The article body can be added here when the full writing is ready.</p><a class="read" href="#writing">View notes <span>↗</span></a></div><div class="feature-art" aria-hidden="true"><div class="word">/01</div><div class="wave"></div></div></article></div></section>
+<div class="nav">
+<div class="container nav-inner">
 
-<section id="writing"><div class="container"><div class="section-head"><div><div class="eyebrow">Writing</div><h2>Notes & thoughts.</h2></div><div class="count mono" id="count">2 NOTES</div></div><div class="posts" id="posts"><article class="post" data-category="technology" data-title="Exploring Static Site Generators with React"><div class="meta"><span>TECHNOLOGY</span><i class="dot"></i><span>JUN 25, 2023</span></div><h3>Exploring Static Site Generators with React</h3><p>A technical note on static site generation and the ideas behind building modern web experiences.</p><a class="read" href="#" onclick="return false">Article details <span>→</span></a></article><article class="post" data-category="electronics" data-title="Advancements in Microelectronics for 2024"><div class="meta"><span>ELECTRONICS</span><i class="dot"></i><span>JAN 15, 2024</span></div><h3>Advancements in Microelectronics for 2024</h3><p>Notes and perspectives on developments in microelectronics and emerging memory and computing technologies.</p><a class="read" href="#" onclick="return false">Article details <span>→</span></a></article></div><div class="empty" id="empty">No notes match your search.</div></div></section>
+<a href="index.html" class="logo">
+    RAHUL K MAHATO
+</a>
 
-<section id="topics"><div class="container"><div class="section-head"><div><div class="eyebrow">Topics</div><h2>What I write about.</h2></div></div><div class="topics"><div class="topic"><b>VLSI & Digital Design</b><p>RTL, circuits, architecture and implementation.</p></div><div class="topic"><b>Microelectronics</b><p>Devices, memory technologies and emerging hardware.</p></div><div class="topic"><b>Compute-in-Memory</b><p>Memory-centric architectures and efficient computing.</p></div><div class="topic"><b>Technology</b><p>Tools, workflows and ideas beyond the lab.</p></div></div></div></section>
+<div class="nav-links" id="navLinks">
+    <a href="#latest">Latest</a>
+    <a href="#life">Life</a>
+    <a href="#journal">Journal</a>
+    <a href="#gallery">Photography</a>
+    <a href="#about">About</a>
+    <a href="admin.html" class="write">Write ↗</a>
+</div>
 
-<section id="about-blog"><div class="container"><div class="cta"><div><div class="eyebrow">Rahul K Mahato</div><h2>A place for ideas in progress.</h2><p>For research, collaboration and technical conversations, visit the main portfolio.</p></div><a class="btn" href="index.html#contact">Let's connect ↗</a></div></div></section>
+<button class="menu" id="menu">☰</button>
 
-<footer><div class="container footer-inner"><div>© 2026 Rahul K Mahato</div><div class="footer-links"><a href="index.html">Portfolio</a><a href="#featured">Featured</a><a href="#writing">Writing</a><a href="index.html#contact">Contact</a></div><div>Microelectronics & VLSI · IIT Roorkee</div></div></footer>
+</div>
+</div>
+
+
+<button class="hero-arrow left">‹</button>
+<button class="hero-arrow right">›</button>
+
+
+<div class="hero-content">
+
+<div class="hero-kicker">
+    A personal journal · 2026
+</div>
+
+<h1>
+    LIFE, <span>ONE MOMENT</span><br>
+    AT A TIME.
+</h1>
+
+<p class="hero-subtitle">
+    Photographs, places, sketches, ordinary days
+    and little experiences worth remembering.
+</p>
+
+<a href="#latest" class="hero-button">
+    Explore my journal ↘
+</a>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     THREE NATURE PANELS
+===================================================== -->
+
+<section class="panels" id="life">
+
+<div class="panel">
+
+<div class="panel-icon">◌</div>
+
+<h3>
+    Daily Life
+</h3>
+
+<p>
+    The small things that make up a day —
+    mornings, evenings, people, routines
+    and moments I want to keep.
+</p>
+
+<a href="#journal" class="panel-link">
+    View journal
+</a>
+
+</div>
+
+
+<div class="panel">
+
+<div class="panel-icon">☼</div>
+
+<h3>
+    Photography
+</h3>
+
+<p>
+    Mountains, skies, streets, oceans,
+    trees, people and everything that
+    catches my eye.
+</p>
+
+<a href="#gallery" class="panel-link">
+    View photographs
+</a>
+
+</div>
+
+
+<div class="panel">
+
+<div class="panel-icon">⌁</div>
+
+<h3>
+    Experiences
+</h3>
+
+<p>
+    Travels, conversations, unexpected
+    days and the stories that stay with me.
+</p>
+
+<a href="#journal" class="panel-link">
+    Read stories
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<section class="welcome" id="about">
+
+<div class="container welcome-grid">
+
+<div class="welcome-copy">
+
+<div class="eyebrow">
+    Welcome to my little corner
+</div>
+
+<h2>
+    A place for the
+    <em>little things.</em>
+</h2>
+
+<p class="quote">
+    “Some moments are ordinary
+    until you look back at them.”
+</p>
+
+<p>
+    This isn't a portfolio and it isn't a
+    technical blog.
+
+    It's simply a personal space where I
+    can keep photographs, sketches,
+    memories, experiences and thoughts
+    from everyday life.
+</p>
+
+<p>
+    Some days will be about a mountain.
+    Some about a cup of tea.
+    Some about a long walk.
+    And some may be about absolutely nothing.
+</p>
+
+</div>
+
+
+<div class="circle-photo"></div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LATEST JOURNAL
+===================================================== -->
+
+<section class="journal" id="latest">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+    From my journal
+</div>
+
+<h2>
+    Recently <em>remembered.</em>
+</h2>
+
+</div>
+
+<div class="section-note">
+    New stories appear here as I write them.
+</div>
+
+</div>
+
+
+<div class="entries" id="journal">
+
+<article class="entry">
+
+<div class="entry-date">
+    Sep 2026
+</div>
+
+<div>
+<h3>
+    The things I notice when I slow down
+</h3>
+
+<p>
+    A few ordinary moments that somehow
+    felt worth writing down.
+</p>
+</div>
+
+<div class="entry-type">
+    Daily life
+</div>
+
+</article>
+
+
+<article class="entry">
+
+<div class="entry-date">
+    Aug 2026
+</div>
+
+<div>
+<h3>
+    A walk with no destination
+</h3>
+
+<p>
+    Sometimes the best journeys begin
+    without a plan.
+</p>
+</div>
+
+<div class="entry-type">
+    Experience
+</div>
+
+</article>
+
+
+<article class="entry">
+
+<div class="entry-date">
+    Jul 2026
+</div>
+
+<div>
+<h3>
+    Photographs I almost didn't take
+</h3>
+
+<p>
+    A collection of frames from a day
+    I didn't expect to remember.
+</p>
+</div>
+
+<div class="entry-type">
+    Photography
+</div>
+
+</article>
+
+
+<article class="entry">
+
+<div class="entry-date">
+    Jun 2026
+</div>
+
+<div>
+<h3>
+    Pages from the sketchbook
+</h3>
+
+<p>
+    Imperfect drawings from a quiet
+    afternoon.
+</p>
+</div>
+
+<div class="entry-type">
+    Sketchbook
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PHOTOGRAPHY
+===================================================== -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+    Through my eyes
+</div>
+
+<h2>
+    A few <em>frames.</em>
+</h2>
+
+</div>
+
+<div class="section-note">
+    Nature, places, people and
+    whatever makes me stop.
+</div>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+    <div class="photo photo-1"></div>
+    <div class="gallery-caption">
+        <small>01 · Mountains</small>
+        <h3>Somewhere above the clouds.</h3>
+    </div>
+</div>
+
+<div class="gallery-item">
+    <div class="photo photo-2"></div>
+    <div class="gallery-caption">
+        <small>02 · Nature</small>
+        <h3>Quiet places.</h3>
+    </div>
+</div>
+
+<div class="gallery-item">
+    <div class="photo photo-3"></div>
+    <div class="gallery-caption">
+        <small>03 · Green</small>
+        <h3>A little wild.</h3>
+    </div>
+</div>
+
+<div class="gallery-item">
+    <div class="photo photo-4"></div>
+    <div class="gallery-caption">
+        <small>04 · Travel</small>
+        <h3>Roads worth taking.</h3>
+    </div>
+</div>
+
+<div class="gallery-item">
+    <div class="photo photo-5"></div>
+    <div class="gallery-caption">
+        <small>05 · Ocean</small>
+        <h3>Where the land ends.</h3>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="cta">
+
+<div class="cta-content">
+
+<div class="eyebrow" style="color:#c5dfb8">
+    Keep exploring
+</div>
+
+<h2>
+    There is always
+    another story.
+</h2>
+
+<p>
+    A new photograph, a new place,
+    another ordinary day —
+    another thing worth remembering.
+</p>
+
+<a href="admin.html" class="cta-button">
+    Write the next story
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+    © 2026 Rahul K Mahato
+</div>
+
+<div class="footer-links">
+    <a href="#latest">Latest</a>
+    <a href="#life">Life</a>
+    <a href="#gallery">Photography</a>
+    <a href="#about">About</a>
+    <a href="https://rahulkmahato.com.np">Portfolio</a>
+</div>
+
+<div>
+    Made for the moments.
+</div>
+
+</div>
+
+</footer>
+
+
 <script>
-const menu=document.getElementById('menu'),links=document.getElementById('navLinks');
-menu.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-const filters=[...document.querySelectorAll('.filter')],posts=[...document.querySelectorAll('.post')],search=document.getElementById('search'),empty=document.getElementById('empty'),count=document.getElementById('count');
-let active='all';
-function apply(){const q=search.value.trim().toLowerCase();let visible=0;posts.forEach(p=>{const matchCat=active==='all'||p.dataset.category===active;const matchText=!q||p.dataset.title.toLowerCase().includes(q)||p.textContent.toLowerCase().includes(q);const show=matchCat&&matchText;p.classList.toggle('hidden',!show);if(show)visible++});empty.style.display=visible?'none':'block';count.textContent=visible+' NOTE'+(visible===1?'':'S')}
-filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');active=btn.dataset.filter;apply()}));
-search.addEventListener('input',apply);
+
+const menu=document.getElementById("menu");
+const nav=document.getElementById("navLinks");
+
+menu.addEventListener("click",()=>{
+    nav.classList.toggle("open");
+});
+
+nav.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        nav.classList.remove("open");
+    });
+});
+
 </script>
+
 </body>
 </html>
