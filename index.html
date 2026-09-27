@@ -82,12 +82,20 @@ button{font:inherit}
 }
 
 .nav{
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     right:0;
     z-index:10;
     border-bottom:1px solid rgba(255,255,255,.20);
+    transition:background .25s ease, box-shadow .25s ease;
+}
+
+.nav.scrolled{
+    background:rgba(7,25,19,.92);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    box-shadow:0 6px 24px rgba(0,0,0,.16);
 }
 
 .nav-inner{
@@ -1327,6 +1335,14 @@ footer{
 
 const menu=document.getElementById("menu");
 const nav=document.getElementById("navLinks");
+const topNav=document.querySelector(".nav");
+
+const updateNav=()=>{
+    topNav.classList.toggle("scrolled", window.scrollY > 24);
+};
+
+updateNav();
+window.addEventListener("scroll", updateNav, {passive:true});
 
 menu.addEventListener("click",()=>{
     nav.classList.toggle("open");
